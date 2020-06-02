@@ -38,6 +38,10 @@ tag_and_push_all() {
     push "$DOCKER_REPO:$TAG";
 }
 
+echo $TRAVIS_BRANCH
+echo $TRAVIS_PULL_REQUEST
+echo $TRAVIS_TAG
+
 # Push snapshot when in master
 if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     tag_and_push_all master-${COMMIT:0:8}
