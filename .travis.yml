@@ -16,7 +16,7 @@ install:
   - npm install
 
 env:
-  - GROUP=quay.io/ed201971 COMMIT=master TAG=”${TRAVIS_TAG}” REPO=front_end;
+  - GROUP=quay.io/ed201971 COMMIT=”${TRAVIS_COMMIT}” TAG=”${TRAVIS_TAG}” REPO=front_end;
 
 script:
   - make test
