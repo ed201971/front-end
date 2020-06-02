@@ -48,8 +48,6 @@ if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; th
     tag_and_push_all master-${COMMIT:0:8}
 fi;
 
-tag_and_push_all latest
-
 # Push tag and latest when tagged
 if [ -n "$TRAVIS_TAG" ]; then
     tag_and_push_all ${TRAVIS_TAG}
