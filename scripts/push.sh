@@ -25,6 +25,7 @@ push() {
 }
 
 tag_and_push_all() {
+    echo $DOCKER_REPO:$TAG
     if [[ -z "$1" ]] ; then
         echo "Please pass the tag"
         exit 1
